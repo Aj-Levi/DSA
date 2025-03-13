@@ -1,4 +1,16 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <cstring>
+#include <queue>
+#include <set>
+#include <iomanip>
+#include <ios>
+#include <string>
+#include <algorithm>
+#include <map>
+#include <math.h>
+#include <numeric>
+#include <unordered_map>
 using namespace std;
 
 vector<int> NGE(vector<int>v){
