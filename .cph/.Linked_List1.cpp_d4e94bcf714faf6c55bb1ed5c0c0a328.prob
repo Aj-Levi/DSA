@@ -1,1 +1,0 @@
-{"name":"Local: Linked_List1","url":"/Users/abhijeetjain/Desktop/DSA Notes/Linked_List1.cpp","tests":[{"id":1724158402786,"input":"4\n1 2 3 4","output":"1 2 3 4 5 \nhello\n1 2 3 4 \n1\n4\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/abhijeetjain/Desktop/DSA Notes/Linked_List1.cpp","group":"local","local":true}
