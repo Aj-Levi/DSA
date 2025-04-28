@@ -1,0 +1,55 @@
+#include<iostream>
+#include<vector>
+#include<map>
+#define ll long long
+#define vll vector<long long>
+#define pb push_back
+#define all(v) v.begin(),v.end()
+using namespace std;
+
+struct Node
+{
+    int data;
+    struct Node* left;
+    struct Node* right;
+
+    Node(int x){
+        data = x;
+        left = right = NULL;
+    }
+};
+
+class Solution {
+    public:
+      vector <int> bottomView(Node *root) {
+           vector<int> ans;
+          if(root == NULL) {
+              return ans;
+          }
+          
+          map<int,int> topNode;
+          queue<pair<Node*, int> > q;
+          
+          q.push(make_pair(root, 0));
+          
+          while(!q.empty()) {
+              pair<Node*, int> temp = q.front();
+              q.pop();
+              Node* frontNode = temp.first;
+              int hd = temp.second;
+              
+              topNode[hd] = frontNode -> data;
+                  
+              if(frontNode->left)
+                  q.push(make_pair(frontNode->left, hd-1));
+              if(frontNode->right)
+                  q.push(make_pair(frontNode->right, hd+1));
+          }
+          
+          for(auto i:topNode) 
+          {
+              ans.push_back(i.second);
+          }
+          return ans;
+      }
+  };
